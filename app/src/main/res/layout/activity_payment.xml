@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="Pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
+        android:layout_marginLeft="133dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:text="Amount to be paid:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginLeft="163dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:textSize="24sp" />
+</android.support.constraint.ConstraintLayout>

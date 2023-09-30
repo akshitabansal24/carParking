@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <EditText
+        android:id="@+id/carnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Car Number"
+        android:inputType="text"
+        android:selectAllOnFocus="false"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="35dp"
+        android:text="Username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="35dp"
+        android:text="Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="35dp"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="35dp"
+        android:text="Phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="35dp"
+        android:text="Car Number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="60dp"
+        android:text="ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/systemgeneratedid" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <TextView
+        android:id="@+id/systemgeneratedid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="60dp"
+        android:text="System Generated ID"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/signupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="Signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+</android.support.constraint.ConstraintLayout>
