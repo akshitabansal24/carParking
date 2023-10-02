@@ -1,4 +1,4 @@
-package com.carParking;
+package com.example.carParking;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -25,12 +25,12 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
         String register_url="https://automaticcarparking.000webhostapp.com/insert.php";
         String method=params[0];
         String status_url="https://automaticcarparking.000webhostapp.com/appstatus.php";
-        String signup_url="https://automaticcarparking.000webhostapp.com/signup.php";
-        String login_url="https://automaticcarparking.000webhostapp.com/login.php";
-        String transaction_url="https://automaticcarparking.000webhostapp.com/transaction.php";
-        String space_url="https://automaticcarparking.000webhostapp.com/space.php";
-        String allot_url="https://automaticcarparking.000webhostapp.com/allot.php";
-        String clearspace_url="https://automaticcarparking.000webhostapp.com/clearspace.php";
+        String signup_url="http://192.168.29.161/carParking/signup.php";
+        String login_url="http://192.168.29.161/carParking/login.php";
+        String transaction_url="http://192.168.29.161/carParking/transaction.php";
+        String space_url="http://192.168.29.161/carParking/space.php";
+        String allot_url="http://192.168.29.161/carParking/allot.php";
+        String clearspace_url="http://192.168.29.161/carParking/clearspace.php";
         if(method.equals("register"))
         {
             String id=params[1];
@@ -141,7 +141,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
                         URLEncoder.encode("e_password","UTF-8")+"="+URLEncoder.encode(password,"UTF-8")+"&"+
                         URLEncoder.encode("e_mail","UTF-8")+"="+URLEncoder.encode(mail,"UTF-8")+"&"+
                         URLEncoder.encode("e_contact","UTF-8")+"="+URLEncoder.encode(contact,"UTF-8")+"&"+
-                        URLEncoder.encode("e_carnumber","UTF-8")+"="+URLEncoder.encode(carnumber,"UTF-8");
+                        URLEncoder.encode("e_carno","UTF-8")+"="+URLEncoder.encode(carnumber,"UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -231,7 +231,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
                 BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
                 String data=URLEncoder.encode("e_id","UTF-8")+"="+URLEncoder.encode(id,"UTF-8")+"&"+
                         URLEncoder.encode("e_car","UTF-8")+"="+URLEncoder.encode(carno,"UTF-8")+"&"+
-                        URLEncoder.encode("e_entry","UTF-8")+"="+URLEncoder.encode(entry,"UTF-8")+"&"+
+                        URLEncoder.encode("e_time","UTF-8")+"="+URLEncoder.encode(entry,"UTF-8")+"&"+
                         URLEncoder.encode("e_space","UTF-8")+"="+URLEncoder.encode(space,"UTF-8")+"&"+
                         URLEncoder.encode("e_exit","UTF-8")+"="+URLEncoder.encode(exit,"UTF-8")+"&"+
                         URLEncoder.encode("e_charges","UTF-8")+"="+URLEncoder.encode(charges,"UTF-8");
@@ -261,7 +261,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
         }
         if(method.equals("space"))
         {
-            String otp="95412";
+            String otp="0";
             try {
                 URL url=new URL(space_url);
                 HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();

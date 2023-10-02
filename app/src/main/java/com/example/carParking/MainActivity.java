@@ -1,4 +1,4 @@
-package com.carParking;
+package com.example.carParking;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nishant.androidqrcodescanner.R;
+import com.example.carParking.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (result.getContents() == null) {
                 Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
 
                 //String method="appstatus";
                 String otp=result.getContents();
@@ -75,14 +75,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 charges="150";
                 String res="";
                 try {
-                    if((res=bt1.execute("transaction",uid,carno,entry,space,exit,charges).get()).contains("Entry success"))
+                    info=bt3.execute("space").get().toString().split(";");
+                    if((res=bt1.execute("transaction",uid,carno,entry,info[0],exit,charges).get()).contains("Entry success"))
                     {
-                        info=bt3.execute("space").get().toString().split(";");
+//                        info=bt3.execute("space").get().toString().split(";");
                         bt4.execute("allot",info[0],uid,entry);
-                        Toast.makeText(MainActivity.this,"You have been alloted: "+info[0],Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"You have been alloted: "+info[1],Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?daddr="+info[1]+","+info[2]));
+                        Uri.parse("http://maps.google.com/maps?daddr="+info[2]+","+info[3]));
                 startActivity(intent);
 
                     }

@@ -1,4 +1,4 @@
-package com.carParking;
+package com.example.carParking;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,11 +9,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.carParking.BackgroundTask;
-import com.carParking.ForgotPassword;
-import com.carParking.MainActivity;
-import com.carParking.SignupActivity;
-import com.example.nishant.androidqrcodescanner.R;
+import com.example.carParking.BackgroundTask;
+import com.example.carParking.ForgotPassword;
+import com.example.carParking.MainActivity;
+import com.example.carParking.SignupActivity;
+import com.example.carParking.R;
 
 import java.util.concurrent.ExecutionException;
 
@@ -28,15 +28,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        locationbutton=findViewById(R.id.locationbutton);
-//        locationbutton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-//                        Uri.parse("http://maps.google.com/maps?daddr=20.5666,45.345"));
-//                startActivity(intent);
-//            }
-//        });
         loginid=findViewById(R.id.loginid);
         password=findViewById(R.id.password);
         loginbutton=findViewById(R.id.loginbutton);
@@ -58,9 +49,9 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 if(data[0].equals("true")) {
-                    Toast.makeText(LoginActivity.this,"Welcome "+data[2],Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Welcome "+data[1],Toast.LENGTH_SHORT).show();
                     Intent in = new Intent(LoginActivity.this, MainActivity.class);
-                    in.putExtra("uid",(data[1]));
+                    in.putExtra("uid",(data[2]));
                     in.putExtra("carno",data[3]);
                     startActivity(in);
                     LoginActivity.this.finish();

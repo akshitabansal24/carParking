@@ -1,10 +1,10 @@
-package com.carParking;
+package com.example.carParking;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.nishant.androidqrcodescanner.R;
+import com.example.carParking.R;
 
 public class Payment extends AppCompatActivity {
 
