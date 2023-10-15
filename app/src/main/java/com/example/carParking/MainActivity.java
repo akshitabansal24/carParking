@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //entry=date.toString();
                 exit=sdf.format(date);
                 space="space";
-                charges="150";
+                charges="0";
                 String res="";
                 try {
                     info=bt3.execute("space").get().toString().split(";");

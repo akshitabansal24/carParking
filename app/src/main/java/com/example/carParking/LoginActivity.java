@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 if(data[0].equals("true")) {
-                    Toast.makeText(LoginActivity.this,"Welcome "+data[1],Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LoginActivity.this,"Welcome "+data[1],Toast.LENGTH_SHORT).show();
                     Intent in = new Intent(LoginActivity.this, MainActivity.class);
                     in.putExtra("uid",(data[2]));
                     in.putExtra("carno",data[3]);

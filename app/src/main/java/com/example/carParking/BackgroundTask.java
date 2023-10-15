@@ -25,12 +25,12 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
         String register_url="https://automaticcarparking.000webhostapp.com/insert.php";
         String method=params[0];
         String status_url="https://automaticcarparking.000webhostapp.com/appstatus.php";
-        String signup_url="http://192.168.29.161/carParking/signup.php";
-        String login_url="http://192.168.29.161/carParking/login.php";
-        String transaction_url="http://192.168.29.161/carParking/transaction.php";
-        String space_url="http://192.168.29.161/carParking/space.php";
-        String allot_url="http://192.168.29.161/carParking/allot.php";
-        String clearspace_url="http://192.168.29.161/carParking/clearspace.php";
+        String signup_url="https://carparkingakshita.000webhostapp.com/signup.php";
+        String login_url="https://carparkingakshita.000webhostapp.com/login.php";
+        String transaction_url="https://carparkingakshita.000webhostapp.com/transaction.php";
+        String space_url="https://carparkingakshita.000webhostapp.com/space.php";
+        String allot_url="https://carparkingakshita.000webhostapp.com/allot.php";
+        String clearspace_url="https://carparkingakshita.000webhostapp.com/clearspace.php";
         if(method.equals("register"))
         {
             String id=params[1];
@@ -396,6 +396,6 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(ctx,result,Toast.LENGTH_LONG).show();
+        Toast.makeText(ctx,result,Toast.LENGTH_LONG);
     }
 }
